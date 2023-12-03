@@ -12,7 +12,7 @@
         "**/*.fot":true,
         "**/*.cb":true,
         "**/*.cb2":true,
-        "**/*.*.lb":true,
+        "**/.*.lb":true,
         
         "**/*.bbl":true,
         "**/*.bcf":true,

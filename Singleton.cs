@@ -28,9 +28,11 @@ public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour {
   
     protected override void Awake() {
         if (Instance != null && Instance != this as T) {
-            Destroy(gameObject);
-            return;
-        } else base.Awake();
+            Debug.LogWarning("WARNING: More than one instance for class: " + GetType().Name + 
+            ". Destroying duplicated instance...");
+			Destroy(gameObject);
+			return;
+		} else base.Awake();
     }
 
 }
